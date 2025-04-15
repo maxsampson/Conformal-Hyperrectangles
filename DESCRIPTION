@@ -1,0 +1,17 @@
+Package: ConformalHyperrectangles
+Title: Conformalized Hyperrectangles for marginal point and quantile regression
+Version: 1.0.0
+Authors@R: c(
+    person("Max", "Sampson", email = "max-sampson@uiowa.edu", role = c("aut", "cre")),
+    person("Kung-Sik", "Chan", email = "kung-sik-chan@uiowa.edu", role = c("aut"))
+    )
+Description: ConformalHyperrectangles creates hyperrectangular prediction regions using marginal 
+    point or quantile regression for a p-dimensional response. The regions provide guaranteed nominal
+    overall coverage thanks to conformal prediction. The regions also achieve balance under mild
+    conditions on the error terms.
+License: GPL-3   
+Depends: R (>= 3.0)
+Imports: quantregRanger, ranger
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
