@@ -34,7 +34,7 @@ res <- p_dim_quantile_conformal(Y, X, alpha = 0.1, train_prop = 0.7, x_test = x_
 mean(rowMeans(res$lower < y_test & res$upper > y_test) == 1) ## out of sample coverage with the quantile approach
 
 res_point <- p_dim_point_conformal(Y, X, alpha = 0.1, train_prop = 0.5, cal1_prop = 0.2, x_test = x_test)
-mean((rowMeans(res_point$lower < y_test & res_point$upper > y_test) == 1) ## out of sample coverage with the point approach
+mean(rowMeans(res_point$lower < y_test & res_point$upper > y_test) == 1) ## out of sample coverage with the point approach
 
 ```
 
