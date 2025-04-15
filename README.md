@@ -31,7 +31,7 @@ Y <- matrix(7 * X ^ 2, nrow = n, ncol = p, byrow = FALSE) + matrix(rnorm(n * p),
 x_test <- matrix(rnorm(10 * d), nrow = 10)  # 10 test points
 y_test <- matrix(7 * x_test ^ 2, nrow = 10, ncol = p) + rnorm(10 * p)
 res <- p_dim_quantile_conformal(Y, X, alpha = 0.1, train_prop = 0.7, x_test = x_test)
-mean(rowMeans(res$lower < y_test & res$upper > y_test) == 1) ## out of sample coverage with the quantile approach
+mean(rowMeans(res$lower < y_test & res$upper > y_test)) ## out of sample coverage with the quantile approach
 
 res_point <- p_dim_point_conformal(Y, X, alpha = 0.1, train_prop = 0.5, cal1_prop = 0.2, x_test = x_test)
 mean((rowMeans(res_point$lower < y_test & res_point$upper > y_test)) ## out of sample coverage with the point approach
