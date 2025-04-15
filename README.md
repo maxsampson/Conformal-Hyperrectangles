@@ -24,6 +24,7 @@ The functions p_dim_point_conformal and p_dim_quantile_conformal require 6 and 5
 A simple example of both functions is given below
 
 ```R
+library(ConformalHyperrectangles)
 set.seed(1)
 n <- 10000; d <- 1; p <- 3
 X <- matrix(rnorm(n * d), n, d)
